@@ -1,7 +1,8 @@
-PHP Image Toolbox
+PHP Image Toolbox (GB Lib)
 =============
+Based on Image_Toolbox by Martin Theimer https://sourceforge.net/projects/image-toolbox/  
 
-Main functuins:
+Main functions:
 
 1. Convert to JPEG  
 2. Make thumbnail  
@@ -15,27 +16,28 @@ Examples
 
 <b>Upload as JPEG</b>
 
-
-	$img = new Image_Toolbox( $_FILES['file']['tmp_name'] );  
-	$img->save( '/tmp/destination.file', 'jpg'); 
-
-
+```php
+$img = new Image_Toolbox( $_FILES['file']['tmp_name'] );  
+$img->save( '/tmp/destination.file', 'jpg'); 
+```
 
 <b>Make thumb</b>
-
-	$img = new Image_Toolbox( $_FILES['file']['tmp_name'] );  
-	$img->newOutputSize( 100, 100, 4 );  
-	$img->save( '/tmp/destination.file' ); 
-
+```php
+$img = new Image_Toolbox( $_FILES['file']['tmp_name'] );  
+$img->newOutputSize( 100, 100, 4 );  
+$img->save( '/tmp/destination.file' ); 
+```
 
 <b>Make thumb (aspect ratio)</b>
-
-	$img = new Image_Toolbox( $_FILES['file']['tmp_name'] );  
-	$img->newOutputSize( 100, 0, 4 );  
-	$img->save( '/tmp/destination.file' ); 
+```php
+$img = new Image_Toolbox( $_FILES['file']['tmp_name'] );  
+$img->newOutputSize( 100, 0, 4 );  
+$img->save( '/tmp/destination.file' ); 
+```
 
 <b>Make thumb (merge center)</b>
-
-	$img = new Image_Toolbox( $_FILES['file']['tmp_name'] );  
-	$img->newOutputSize( 100, 0, 1 );  
-	$img->save( '/tmp/destination.file' ); 
+```php
+$img = new Image_Toolbox( $_FILES['file']['tmp_name'] );  
+$img->newOutputSize( 100, 0, 1 );  
+$img->save( '/tmp/destination.file' ); 
+```
